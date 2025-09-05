@@ -34,11 +34,10 @@ Claude> How do I implement a binary search?
 [Everything is being saved in real-time!]
 ```
 
-## 🚀 Quick Start
+## 🚀 Quick Start - Two Options
 
-### Clean Logs (Recommended for Claude)
-
-For clean, readable logs without terminal escape codes:
+### Option 1: Clean Logs (Recommended for Claude) ✨
+**Produces human-readable logs without terminal escape codes**
 
 ```bash
 # Install clean version
@@ -49,7 +48,21 @@ chmod +x ~/.local/bin/ai-autosave-clean
 ai-autosave-clean claude
 ```
 
-## 🚀 Standard Installation
+**Output example:**
+```
+=== claude Session Log ===
+Started: Fri Sep 5 08:12:58 AM UTC 2025
+Working Directory: /home/runner/workspace
+=============================
+
+You: How do I implement binary search?
+Claude: Binary search is an efficient algorithm...
+```
+
+### Option 2: Raw Logs (Full Terminal Capture) 📼
+**Captures everything including colors and terminal sequences**
+
+## Standard Installation
 
 ### One-line Installation
 
@@ -79,17 +92,22 @@ sudo cp bin/ai-autosave /usr/local/bin/
 
 ## 📖 Usage
 
-### Basic Usage
+### Basic Usage - Choose Your Method
 
+#### 🧹 Clean Logs (Recommended)
 ```bash
-# Start Claude with auto-save
-ai-autosave claude
+# For readable, clean logs
+ai-autosave-clean claude
+ai-autosave-clean gemini
+ai-autosave-clean codex
+```
 
-# Start Gemini with auto-save
-ai-autosave gemini
-
-# Start any command with auto-save
-ai-autosave codex
+#### 📼 Raw Logs (Full capture with escape codes)
+```bash
+# For complete terminal recording
+ai-autosave -m script claude
+ai-autosave -m script gemini
+ai-autosave -m script codex
 ```
 
 ### Advanced Options
@@ -160,12 +178,14 @@ ls -t .ai-cli-autosave/*.txt | head -1 | xargs cat
 
 ## 🎯 Features
 
+- ✅ **Two Modes** - Clean human-readable OR raw terminal capture
 - ✅ **Real-time saving** - Every keystroke is saved
 - ✅ **Crash protection** - Survives terminal crashes
 - ✅ **Multiple AI tools** - Works with Claude, Gemini, CodeX, etc.
 - ✅ **Lightweight** - Minimal performance impact (<1% CPU)
 - ✅ **Customizable** - Configurable paths and intervals
 - ✅ **Cross-platform** - Works on Linux, macOS, WSL
+- ✅ **Unique filenames** - Each session gets a new timestamped file
 
 ## 💡 Use Cases
 
