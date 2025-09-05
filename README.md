@@ -121,10 +121,10 @@ export AI_BACKUP_INTERVAL=30
 
 ## 📁 Log Storage
 
-Logs are saved to `.ai-cli-log/` by default:
+Logs are saved to `.ai-cli-autosave/` by default:
 
 ```
-.ai-cli-log/
+.ai-cli-autosave/
 ├── claude-20250105-143022.txt
 ├── gemini-20250105-150533.txt
 └── codex-20250105-160122.txt
@@ -134,13 +134,13 @@ Logs are saved to `.ai-cli-log/` by default:
 
 ```bash
 # List all logs
-ls -la .ai-cli-log/
+ls -la .ai-cli-autosave/
 
 # Search logs for specific content
-grep -r "binary search" .ai-cli-log/
+grep -r "binary search" .ai-cli-autosave/
 
 # View most recent log
-ls -t .ai-cli-log/*.txt | head -1 | xargs cat
+ls -t .ai-cli-autosave/*.txt | head -1 | xargs cat
 ```
 
 ## 🎯 Features
@@ -172,7 +172,7 @@ ai-autosave -m script claude
 Or create a simple wrapper:
 ```bash
 #!/bin/bash
-script -q -f ".ai-cli-log/claude-$(date +%Y%m%d-%H%M%S).txt" -c "claude"
+script -q -f ".ai-cli-autosave/claude-$(date +%Y%m%d-%H%M%S).txt" -c "claude"
 ```
 
 ### Command not found

@@ -5,7 +5,7 @@
 # Version: 1.0.0
 
 # Default configuration
-DEFAULT_LOG_DIR="${AI_LOG_DIR:-.ai-cli-log}"
+DEFAULT_LOG_DIR="${AI_LOG_DIR:-.ai-cli-autosave}"
 DEFAULT_BACKUP_INTERVAL="${AI_BACKUP_INTERVAL:-60}"
 DEFAULT_AI_TOOL="${1:-claude}"
 
