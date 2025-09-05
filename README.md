@@ -162,6 +162,19 @@ ls -t .ai-cli-log/*.txt | head -1 | xargs cat
 
 ## 🛠️ Troubleshooting
 
+### Claude specific issues
+
+If Claude shows error about input, use script method:
+```bash
+ai-autosave -m script claude
+```
+
+Or create a simple wrapper:
+```bash
+#!/bin/bash
+script -q -f ".ai-cli-log/claude-$(date +%Y%m%d-%H%M%S).txt" -c "claude"
+```
+
 ### Command not found
 
 ```bash
