@@ -1,0 +1,42 @@
+{
+  "name": "ai-cli-autosave",
+  "version": "1.0.0",
+  "description": "Never lose your AI conversations again! Real-time logging for Claude, Gemini, and other AI CLI tools.",
+  "main": "bin/ai-autosave",
+  "scripts": {
+    "install": "./install.sh",
+    "test": "bash test/test.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sburakc/ai-cli-autosave.git"
+  },
+  "keywords": [
+    "ai",
+    "claude",
+    "gemini",
+    "cli",
+    "logging",
+    "auto-save",
+    "conversation",
+    "backup",
+    "terminal",
+    "replit"
+  ],
+  "author": "sburakc <sburakc@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sburakc/ai-cli-autosave/issues"
+  },
+  "homepage": "https://github.com/sburakc/ai-cli-autosave#readme",
+  "bin": {
+    "ai-autosave": "./bin/ai-autosave"
+  },
+  "os": [
+    "linux",
+    "darwin"
+  ],
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
