@@ -36,6 +36,21 @@ Claude> How do I implement a binary search?
 
 ## 🚀 Quick Start
 
+### Clean Logs (Recommended for Claude)
+
+For clean, readable logs without terminal escape codes:
+
+```bash
+# Install clean version
+curl -sSL https://raw.githubusercontent.com/sburakc/ai-cli-autosave/main/bin/ai-autosave-clean > ~/.local/bin/ai-autosave-clean
+chmod +x ~/.local/bin/ai-autosave-clean
+
+# Use it
+ai-autosave-clean claude
+```
+
+## 🚀 Standard Installation
+
 ### One-line Installation
 
 ```bash
